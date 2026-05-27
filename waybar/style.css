@@ -1,0 +1,102 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 13px;
+    min-height: 0;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.68);
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar > box {
+    background: gray;
+    margin: 0 0;
+    padding: 0 4px;
+    border-radius: 15px;
+    border: 2px solid #414868;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+/* Semua module jadi bubble */
+#workspaces,
+#window,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#tray,
+#custom-launcher,
+#custom-power {
+    background: #181825;
+    color: #c0caf5;
+    padding: 0 12px;
+    margin: 5px 3px;
+    border-radius: 12px;
+}
+
+/* Hover glow */
+#clock:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-launcher:hover,
+#custom-power:hover {
+    background: #292e42;
+    box-shadow: 0 0 8px #7aa2f7;
+}
+
+/* Workspace */
+#workspaces button {
+    padding: 0 6px;
+    color: #565f89;
+    background: transparent;
+}
+#workspaces button.active {
+    color: #7aa2f7;
+    background: #1f2335;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px #7aa2f7;
+}
+#workspaces button.urgent {
+    color: #f7768e;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+/* Warna khusus */
+#clock { color: #bb9af7; font-weight: bold; }
+#network { color: #7dcfff; }
+#bluetooth { color: #7aa2f7; }
+#pulseaudio { color: #e0af68; }
+#pulseaudio.muted { color: #f7768e; }
+#battery { color: #9ece6a; }
+#battery.warning { color: #e0af68; }
+#battery.critical { color: #f7768e; animation: blink 0.5s linear infinite; }
+#cpu { color: #ff9e64; }
+#memory { color: #bb9af7; }
+#temperature { color: #7dcfff; }
+#temperature.critical { color: #f7768e; }
+#custom-launcher { color: #7dcfff; font-size: 16px; padding: 0 10px; }
+#custom-power { color: #f7768e; }
+
+/* Group hardware biar bisa collapse */
+#group-hardware {
+    padding: 0;
+    background: transparent;
+}
+.hardware-child {
+    background: #24283b;
+    margin: 5px 2px;
+    border-radius: 12px;
+}
+
+/* Animasi kedip */
+@keyframes blink {
+    to { opacity: 0.3; }
+}
