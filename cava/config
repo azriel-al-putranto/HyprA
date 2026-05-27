@@ -1,0 +1,30 @@
+[general]
+framerate = 60
+bars = 0
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+channels = stereo
+
+[color]
+# Background transparan
+background = default
+background_alpha = 0.0
+
+# Warna bar Catppuccin
+gradient = 1
+gradient_color_1 = '#89b4fa'
+gradient_color_2 = '#cba6f7'
+gradient_color_3 = '#f38ba8'
+gradient_color_4 = '#fab387'
+gradient_color_5 = '#a6e3a1'
+gradient_color_6 = '#94e2d5'
+gradient_color_7 = '#89dceb'
+gradient_color_8 = '#74c7ec'
+
+[smoothing]
+noise_reduction = 77
